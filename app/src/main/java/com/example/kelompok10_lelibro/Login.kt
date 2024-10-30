@@ -48,14 +48,14 @@ class Login : AppCompatActivity() {
     private fun validate(): Boolean{
         var result = true
         if (TextUtils.isEmpty(emailLogin!!.text.toString())){
-            emailLogin!!.error = "Email must be filled"
+            emailLogin!!.error = "Email harus diisi"
             result = false
         } else {
             emailLogin!!.error = null
         }
 
         if (TextUtils.isEmpty(passwordLogin!!.text.toString())){
-            passwordLogin!!.error = "Password must be filled"
+            passwordLogin!!.error = "Password harus diisi"
             result = false
         } else {
             passwordLogin!!.error = null
@@ -67,7 +67,7 @@ class Login : AppCompatActivity() {
         if (user != null){
             startActivity(Intent(this, MainActivity::class.java))
         } else {
-            Toast.makeText(this, "Register Account First", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Daftar akun terlebih dahulu", Toast.LENGTH_LONG).show()
         }
     }
 
@@ -80,7 +80,7 @@ class Login : AppCompatActivity() {
                 val user = mAuth.currentUser
                 updateUI(user)
             }else {
-                Toast.makeText(this, "Login failed", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Gagal login", Toast.LENGTH_LONG).show()
                 updateUI(null)
             }
         }
