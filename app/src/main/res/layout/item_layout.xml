@@ -12,9 +12,9 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
 
 
         <androidx.cardview.widget.CardView
@@ -35,32 +35,33 @@
             android:id="@+id/showJudul"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
             android:layout_marginLeft="5dp"
-            android:padding="5dp"
-            android:fontFamily="@font/rosarivo"
+            android:layout_marginRight="5dp"
             android:ellipsize="end"
+            android:fontFamily="@font/rosarivo"
             android:maxLines="1"
+            android:padding="5dp"
             android:scrollHorizontally="false"
             android:text="Judul"
             android:textColor="#FFFFFF"
-            android:textSize="20dp" />
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/showPenulis"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:layout_marginRight="5dp"
             android:layout_marginLeft="5dp"
-            android:padding="5dp"
-            android:fontFamily="@font/rosarivo"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
             android:ellipsize="end"
+            android:fontFamily="@font/rosarivo"
             android:maxLines="1"
+            android:padding="5dp"
             android:scrollHorizontally="false"
             android:text="Penulis"
             android:textColor="#FFFFFF"
-            android:textSize="18dp" />
+            android:textSize="16dp" />
 
     </LinearLayout>
 
