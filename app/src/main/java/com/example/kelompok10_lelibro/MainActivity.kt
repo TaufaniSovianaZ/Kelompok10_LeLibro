@@ -84,7 +84,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun LogoutFun() {
         mAuth.signOut()
-        Toast.makeText(this, "Logged Out", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "Akun Anda telah keluar", Toast.LENGTH_SHORT).show()
 
         val intent = Intent(this, intro_page::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
