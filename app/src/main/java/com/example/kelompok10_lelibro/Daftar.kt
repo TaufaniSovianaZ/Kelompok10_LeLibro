@@ -49,28 +49,28 @@ class Daftar : AppCompatActivity() {
     private fun validate(): Boolean{
         var result = true
         if (TextUtils.isEmpty(emailDaftar!!.text.toString())){
-            emailDaftar!!.error = "Email must be filled"
+            emailDaftar!!.error = "Email harus diisi"
             result = false
         } else {
             emailDaftar!!.error = null
         }
 
         if (TextUtils.isEmpty(passwordDaftar!!.text.toString())){
-            passwordDaftar!!.error = "Password must be filled"
+            passwordDaftar!!.error = "Password harus diisi"
             result = false
         } else {
             passwordDaftar!!.error = null
         }
 
         if (TextUtils.isEmpty(konfirmasiPassword!!.text.toString())){
-            konfirmasiPassword!!.error = "Confirm Password Required"
+            konfirmasiPassword!!.error = "Konfirmasi password diperlukan"
             result = false
         }   else {
             konfirmasiPassword!!.error = null
         }
 
         if (passwordDaftar.text.toString() != konfirmasiPassword.text.toString()){
-            konfirmasiPassword.error = "Passwords Do Not Match"
+            konfirmasiPassword.error = "Passwords tidak sesuai"
             result = false
         }
 
@@ -81,7 +81,7 @@ class Daftar : AppCompatActivity() {
         if (user != null){
             startActivity(Intent(this, intro_page::class.java))
         } else {
-            Toast.makeText(this, "Password Must Be 8 Characters", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Password harus 8 karakter", Toast.LENGTH_LONG).show()
         }
     }
 
@@ -94,7 +94,7 @@ class Daftar : AppCompatActivity() {
                 val user = mAuth!!.currentUser
                 updateUI(user)
             } else {
-                Toast.makeText(this, "Failed to Create Account", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Gagal untuk membuat akun", Toast.LENGTH_LONG).show()
                 updateUI(null)
             }
         }
