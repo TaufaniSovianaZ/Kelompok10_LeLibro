@@ -90,7 +90,7 @@
                 android:layout_marginTop="32dp"
                 android:layout_marginRight="30dp"
                 android:background="@drawable/border_btn"
-                android:text="Log-in"
+                android:text="Masuk"
                 android:textColor="#EFE3C8" />
         </LinearLayout>
     </ScrollView>
